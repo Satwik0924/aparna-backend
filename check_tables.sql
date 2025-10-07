@@ -1,0 +1,1 @@
+DESCRIBE property_amenities_highlights;
