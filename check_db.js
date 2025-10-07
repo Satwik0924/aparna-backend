@@ -1,17 +1,23 @@
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('aparna_constructions', 'crm_scaledino', 'AVNS_q8CvLz2TY6nVQ1-W08G', {
-  host: 'crm-scaledino-apr-2-backup-do-user-3486465-0.i.db.ondigitalocean.com',
-  port: 25060,
-  dialect: 'mysql',
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  },
-  logging: false
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USERNAME,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: 'mysql',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    },
+    logging: false
+  }
+);
 
 async function checkDatabase() {
   try {
