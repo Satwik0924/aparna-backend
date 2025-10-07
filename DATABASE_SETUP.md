@@ -36,7 +36,7 @@ Host: crm-scaledino-apr-2-backup-do-user-3486465-0.i.db.ondigitalocean.com
 Port: 25060
 Database: aparna_constructions
 Username: crm_scaledino
-Password: AVNS_q8CvLz2TY6nVQ1-W08G
+Password: [Set in .env as DB_PASSWORD]
 ```
 
 ### **SSL Configuration**
